@@ -1,5 +1,51 @@
 {
 	"name": "Event sheet 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-los-to-object",
+					"objectClass": "RombaSan",
+					"sid": 213925746632182,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "Players",
+						"image-point": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Players",
+					"sid": 461691073265211
+				}
+			],
+			"sid": 983341049195975
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 939253041874066
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "Sprite2",
+					"sid": 206557569897128,
+					"parameters": {
+						"object": "RombaSan",
+						"image-point-optional": "0"
+					}
+				}
+			],
+			"sid": 997616604089914
+		}
+	],
 	"sid": 605220830253118
 }

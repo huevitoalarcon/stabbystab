@@ -1,0 +1,65 @@
+{
+	"name": "RombaSan",
+	"plugin-id": "Sprite",
+	"sid": 847967356403665,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 569592513784091
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 540948752480834
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 408990954541939
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 501,
+						"height": 501,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1547508,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								1,
+								0,
+								0.9982768837325349,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 578575781576097,
+				"name": "Idle",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
