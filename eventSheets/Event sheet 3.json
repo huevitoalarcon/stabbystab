@@ -1,0 +1,31 @@
+{
+	"name": "Event sheet 3",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-button-pressed",
+					"objectClass": "Gamepad",
+					"sid": 620353822629535,
+					"parameters": {
+						"gamepad": "0",
+						"button": "button-a"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 697084425971244,
+					"parameters": {
+						"layout": "Layout 1"
+					}
+				}
+			],
+			"sid": 427500526412391
+		}
+	],
+	"sid": 993245174756527
+}

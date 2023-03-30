@@ -1,7 +1,7 @@
 {
-	"name": "Player_1",
+	"name": "Sprite10",
 	"plugin-id": "Sprite",
-	"sid": 448248766394772,
+	"sid": 417105178434509,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 450,
-						"height": 600,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 103,
+						"height": 60,
+						"originX": 0.5339805825242718,
+						"originY": 0,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7365213,
+						"imageSpriteId": 3960354,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 611105589181547,
+				"sid": 241560040159786,
 				"name": "Idle",
 				"isLooping": false,
 				"isPingPong": false,
@@ -34,55 +34,32 @@
 			{
 				"frames": [
 					{
-						"width": 450,
-						"height": 600,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 105,
+						"height": 38,
+						"originX": 0.5142857142857142,
+						"originY": -0.02631578947368421,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 224630,
-						"useCollisionPoly": true,
-						"duration": 1
-					}
-				],
-				"sid": 847482663924883,
-				"name": "Panic",
-				"isLooping": false,
-				"isPingPong": false,
-				"repeatCount": 1,
-				"repeatTo": 0,
-				"speed": 5
-			},
-			{
-				"frames": [
-					{
-						"width": 450,
-						"height": 600,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"imageSpriteId": 6047637,
+						"imageSpriteId": 1352621,
 						"collisionPoly": {
 							"points": [
-								1,
 								0,
-								0.9843402777777778,
-								1,
 								0,
 								1,
 								0,
-								0
+								0.9875744047619047,
+								1,
+								0,
+								1
 							]
 						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 366945157539011,
-				"name": "Pop",
+				"sid": 489035089989405,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

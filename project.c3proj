@@ -8,6 +8,13 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -15,15 +22,22 @@
 		},
 		{
 			"type": "plugin",
-			"id": "gamepad",
-			"name": "Gamepad",
+			"id": "Text",
+			"name": "Text",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
-			"type": "behavior",
-			"id": "Bullet",
-			"name": "Bullet",
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "gamepad",
+			"name": "Gamepad",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -43,6 +57,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
@@ -57,7 +78,20 @@
 			"Player_2",
 			"RombaSan",
 			"Gamepad",
-			"Sprite2"
+			"Sprite2",
+			"Text",
+			"Audio",
+			"Sprite3",
+			"Sprite4",
+			"spri",
+			"Sprite5",
+			"Sprite6",
+			"Sprite7",
+			"Sprite8",
+			"Sprite9",
+			"Sprite10",
+			"TiledBackground",
+			"Sprite11"
 		],
 		"subfolders": []
 	},
@@ -71,13 +105,17 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Layout 1",
+			"Layout 2",
+			"Layout 3"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Event sheet 1",
+			"Event sheet 2",
+			"Event sheet 3"
 		],
 		"subfolders": []
 	},
@@ -87,11 +125,37 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "balloonPop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 806247922522773,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "sopapiGlobo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 618957402127344,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "itty-bitty-8-bit-kevin-macleod-main-version-03-13-7983.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 690405901432506,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {

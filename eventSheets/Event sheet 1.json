@@ -2,6 +2,16 @@
 	"name": "Event sheet 1",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "BalloonCount",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 470404821019024
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -13,16 +23,84 @@
 						"object": "Players",
 						"image-point": "0"
 					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Players",
+					"sid": 172976001382466,
+					"parameters": {
+						"instance-variable": "isAlive"
+					}
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "Players",
+					"sid": 818065789780933,
+					"parameters": {
+						"animation": "\"Idle\""
+					}
 				}
 			],
 			"actions": [
 				{
-					"id": "destroy",
+					"id": "set-animation",
 					"objectClass": "Players",
-					"sid": 461691073265211
+					"sid": 311682754294682,
+					"parameters": {
+						"animation": "\"Panic\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 170022800309210,
+					"parameters": {
+						"audio-file": "sopapiGlobo",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"sound\""
+					}
 				}
 			],
 			"sid": 983341049195975
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-los-to-object",
+					"objectClass": "RombaSan",
+					"sid": 359877516393585,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "Players",
+						"image-point": "0"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Players",
+					"sid": 526660012418174,
+					"parameters": {
+						"instance-variable": "isAlive"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Players",
+					"sid": 113769281880847,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 848779102018775
 		},
 		{
 			"eventType": "block",
@@ -42,9 +120,451 @@
 						"object": "RombaSan",
 						"image-point-optional": "0"
 					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "Sprite2",
+					"sid": 321973488073312,
+					"parameters": {
+						"angle": "RombaSan.Angle"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "Sprite10",
+					"sid": 557952086355717,
+					"parameters": {
+						"object": "RombaSan",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "Sprite10",
+					"sid": 391354680276694,
+					"parameters": {
+						"angle": "RombaSan.Angle"
+					}
 				}
 			],
 			"sid": 997616604089914
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Romba Movement",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 887310148678618,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-x-axis",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "RombaSan",
+							"sid": 228287940891573,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 185705991428444
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 688755191354961,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-x-axis",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "RombaSan",
+							"sid": 279786285615236,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 451973436035423
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 539177236762083,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-y-axis",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "RombaSan",
+							"sid": 468522673169436,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "down"
+							}
+						}
+					],
+					"sid": 264737604747505
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 228966375944736,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-y-axis",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "RombaSan",
+							"sid": 831691616394948,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "up"
+							}
+						}
+					],
+					"sid": 850194947285447
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 409584319651376,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "right-analog-x-axis",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "rotate-counter-clockwise",
+							"objectClass": "RombaSan",
+							"sid": 811418681895456,
+							"parameters": {
+								"degrees": "2"
+							}
+						}
+					],
+					"sid": 873833662999618
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 882696705152450,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "right-analog-x-axis",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "rotate-clockwise",
+							"objectClass": "RombaSan",
+							"sid": 313964987179581,
+							"parameters": {
+								"degrees": "2"
+							}
+						}
+					],
+					"sid": 283714858759104
+				}
+			],
+			"sid": 257596016291079
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite2",
+					"sid": 391988696521695,
+					"parameters": {
+						"object": "Players"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Players",
+					"sid": 525048117896737,
+					"parameters": {
+						"instance-variable": "isAlive"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "RombaSan",
+					"sid": 929972671006522,
+					"parameters": {
+						"instance-variable": "isAlive"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Players",
+					"sid": 582086546151165,
+					"parameters": {
+						"instance-variable": "isAlive",
+						"value": "false"
+					}
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 821431438844100,
+					"parameters": {
+						"variable": "BalloonCount",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 158081244062412,
+					"parameters": {
+						"text": "BalloonCount"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Players",
+					"sid": 319916778678864,
+					"parameters": {
+						"animation": "\"Pop\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 328445620741612,
+					"parameters": {
+						"audio-file": "balloonPop",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 873870920003657,
+					"parameters": {
+						"seconds": "1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Players",
+					"sid": 587556096702892
+				}
+			],
+			"sid": 586087237424153
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 345358498631397
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 648994512404781,
+					"parameters": {
+						"variable": "BalloonCount",
+						"value": "Players.Count"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 159567814582145,
+					"parameters": {
+						"text": "BalloonCount"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 890323060128109,
+					"parameters": {
+						"audio-file": "itty-bitty-8-bit-kevin-macleod-main-version-03-13-7983",
+						"loop": "looping",
+						"volume": "-4",
+						"stereo-pan": "0",
+						"tag-optional": "\"bgm\""
+					}
+				}
+			],
+			"sid": 788445569017706
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 123731174003531,
+					"parameters": {
+						"variable": "BalloonCount",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 373050512374988,
+					"parameters": {
+						"layout": "Layout 2"
+					}
+				}
+			],
+			"sid": 679177209114995
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Players",
+					"sid": 951690120478842,
+					"parameters": {
+						"object": "Sprite10"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "RombaSan",
+					"sid": 962599528419646,
+					"parameters": {
+						"instance-variable": "isAlive"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "RombaSan",
+					"sid": 840644551322104,
+					"parameters": {
+						"instance-variable": "isAlive",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Sprite10",
+					"sid": 543533195510100,
+					"parameters": {
+						"animation": "\"Animation 1\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 699638417105493,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "RombaSan",
+					"sid": 105641549504398
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Sprite2",
+					"sid": 656995594649182
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Sprite10",
+					"sid": 300459167178768
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 885822323867193,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 208849360770019,
+					"parameters": {
+						"layout": "Layout 3"
+					}
+				}
+			],
+			"sid": 956009553236614
 		}
 	],
 	"sid": 605220830253118

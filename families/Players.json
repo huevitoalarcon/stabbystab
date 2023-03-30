@@ -2,7 +2,15 @@
 	"name": "Players",
 	"plugin-id": "Sprite",
 	"sid": 846878718059723,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "isAlive",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 439240304271381
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"members": [

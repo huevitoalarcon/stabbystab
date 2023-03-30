@@ -3,7 +3,15 @@
 	"plugin-id": "Sprite",
 	"sid": 847967356403665,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "isAlive",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 906089635233124
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "LOS",
@@ -11,14 +19,14 @@
 			"sid": 569592513784091
 		},
 		{
-			"behaviorId": "Bullet",
-			"name": "Bullet",
-			"sid": 540948752480834
-		},
-		{
 			"behaviorId": "solid",
 			"name": "Solid",
 			"sid": 408990954541939
+		},
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 905963082972927
 		}
 	],
 	"effectTypes": [],
@@ -48,6 +56,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.500998003992016,
+								"y": 0.9720558882235529
+							}
+						],
 						"duration": 1
 					}
 				],
