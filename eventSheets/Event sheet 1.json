@@ -565,6 +565,250 @@
 				}
 			],
 			"sid": 956009553236614
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Player_1 Control",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 233005046322066,
+							"parameters": {
+								"gamepad": "2",
+								"axis": "left-analog-x-axis",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player_1",
+							"sid": 268216384435782,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 195929870336530
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 262876431237689,
+							"parameters": {
+								"gamepad": "2",
+								"axis": "left-analog-x-axis",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player_1",
+							"sid": 504429017085927,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 962539625932560
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 138620236749971,
+							"parameters": {
+								"gamepad": "2",
+								"axis": "left-analog-y-axis",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player_1",
+							"sid": 121768152002138,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "down"
+							}
+						}
+					],
+					"sid": 323592271009766
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 862036054882014,
+							"parameters": {
+								"gamepad": "2",
+								"axis": "left-analog-y-axis",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player_1",
+							"sid": 988515313981769,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "up"
+							}
+						}
+					],
+					"sid": 898015801582857
+				}
+			],
+			"sid": 572443537786200
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Player 2 Control",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 415732784255711,
+							"parameters": {
+								"gamepad": "1",
+								"axis": "left-analog-x-axis",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player_2",
+							"sid": 256161543276055,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 857609674032981
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 257369431256581,
+							"parameters": {
+								"gamepad": "1",
+								"axis": "left-analog-x-axis",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player_2",
+							"sid": 399914728618269,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 188606768085716
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 651226808585621,
+							"parameters": {
+								"gamepad": "1",
+								"axis": "left-analog-y-axis",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player_2",
+							"sid": 933620116557184,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "up"
+							}
+						}
+					],
+					"sid": 143182208275951
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 448213712953496,
+							"parameters": {
+								"gamepad": "1",
+								"axis": "left-analog-y-axis",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player_2",
+							"sid": 254983378394719,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "down"
+							}
+						}
+					],
+					"sid": 940240785495729
+				}
+			],
+			"sid": 266502382176352
 		}
 	],
 	"sid": 605220830253118

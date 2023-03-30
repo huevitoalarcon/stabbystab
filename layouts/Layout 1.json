@@ -48,7 +48,20 @@
 					"instanceVariables": {
 						"isAlive": true
 					},
-					"behaviors": {},
+					"behaviors": {
+						"8Direction": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-8",
+								"set-angle": "no",
+								"allow-sliding": false,
+								"default-controls": false,
+								"enabled": true
+							}
+						}
+					},
 					"world": {
 						"x": 564,
 						"y": 455,
@@ -223,7 +236,20 @@
 					"instanceVariables": {
 						"isAlive": true
 					},
-					"behaviors": {},
+					"behaviors": {
+						"8Direction": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-8",
+								"set-angle": "no",
+								"allow-sliding": false,
+								"default-controls": false,
+								"enabled": true
+							}
+						}
+					},
 					"world": {
 						"x": 1440,
 						"y": 448,
